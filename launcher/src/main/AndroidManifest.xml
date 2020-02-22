@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.changren.android.launcher">
+
+    <permission
+        android:name="com.changren.android.launcher.user.READ_WRITE"
+        android:protectionLevel="normal" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>-->
+    <!-- 往SDCard读/写数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.Launcher"
+            android:clearTaskOnLaunch="true"
+            android:enabled="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:resumeWhilePausing="true"
+            android:stateNotNeeded="true"
+            android:taskAffinity=""
+            android:theme="@style/LauncherTheme"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.MONKEY" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.AppListActivity"
+            android:theme="@style/AppListTheme" />
+
+        <!--横竖屏切换，采用Activity重新加载-->
+        <activity
+            android:name=".user.ui.LoginActivity"
+            android:exported="true"
+            android:theme="@style/LoginTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".user.ui.AvatarSettingActivity"
+            android:theme="@style/UserTheme"
+            android:configChanges="keyboardHidden|screenSize|orientation" />
+
+        <!--横竖屏切换，采用Activity重新加载-->
+        <activity
+            android:name=".user.ui.UserProfileActivity"
+            android:theme="@style/UserTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".user.ui.AnamnesisActivity"
+            android:theme="@style/UserTheme"
+            android:configChanges="keyboardHidden|screenSize|orientation" />
+
+        <activity
+            android:name=".user.ui.CreateFamilyActivity"
+            android:theme="@style/UserTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:configChanges="keyboardHidden|screenSize|orientation" />
+
+        <activity
+            android:name=".user.ui.MemberListActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme" />
+
+        <activity
+            android:name=".user.ui.FamilyListActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme" />
+
+        <activity
+            android:name="com.changren.android.upgrade.UpdatePromptsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/DialogTheme" />
+
+        <activity
+            android:name="com.changren.android.upgrade.DownloadApkActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/DialogTheme" />
+
+        <activity
+            android:name=".user.ui.PhoneInfoActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme" />
+
+        <activity
+            android:name=".user.ui.BindingPhoneActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+        <activity
+            android:name=".user.ui.UpdateAnamnesisActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme" />
+
+        <activity
+            android:name=".user.ui.AboutUsActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/UserTheme" />
+
+        <activity
+            android:name=".user.ui.MemberRegisterActivity"
+            android:theme="@style/UserTheme"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <provider
+            android:name=".database.UserInfoProvider"
+            android:authorities="${applicationId}.user.provider"
+            android:exported="true"
+            android:permission="${applicationId}.user.READ_WRITE" />
+
+        <service android:name="com.changren.android.upgrade.UpgradeService" />
+
+        <!-- android:authorities="${applicationId}"
+            这个值必须与DownloadManager中的authorities一致（不设置则为应用包名）-->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

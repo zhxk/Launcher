@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.hdodenhof.circleimageview.CircleImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iv_avatar"
+    android:layout_width="@dimen/dp_150"
+    android:layout_height="@dimen/dp_150"
+    android:contentDescription="@string/empty"
+    android:src="@drawable/default_male_middle" />

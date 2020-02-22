@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background"
+        android:drawable="@mipmap/ic_battery_uncharged" />
+
+    <item android:id="@android:id/secondaryProgress"
+        android:top="@dimen/dp_4"
+        android:bottom="@dimen/dp_4"
+        android:left="@dimen/dp_4"
+        android:right="@dimen/dp_4">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/battery_charged_progress_color"/>
+                <corners android:radius="@dimen/dp_2"/>
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress"
+        android:top="@dimen/dp_4"
+        android:bottom="@dimen/dp_4"
+        android:left="@dimen/dp_4"
+        android:right="@dimen/dp_4">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/battery_charged_progress_color"/>
+                <corners android:radius="@dimen/dp_2"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

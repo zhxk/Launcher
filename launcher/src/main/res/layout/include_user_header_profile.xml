@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/text_XL_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_20"
+        android:singleLine="true"
+        android:text="@string/user_profile"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/iv_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/user_et_bg_shape_white_corners_10"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        style="@style/text_LG_grey"
+        android:gravity="start"
+        app:layout_constraintEnd_toStartOf="@+id/et_nickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/user_et_bg_shape_white_corners_10"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="@string/user_nickname"
+        android:inputType="textPersonName"
+        style="@style/text_LG_grey"
+        android:gravity="start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_name"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <Switch
+        android:id="@+id/switch_sex"
+        style="@style/text_LG_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_25"
+        android:switchMinWidth="@dimen/dp_240"
+        android:switchPadding="@dimen/dp_15"
+        android:text="@string/user_sex"
+        android:thumb="@drawable/user_layer_switch_thumb"
+        android:track="@drawable/user_layer_switch_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <TextView
+        android:id="@+id/tv_birthday_desc"
+        style="@style/text_LG_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="@string/user_birthday"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_sex"
+        app:layout_constraintEnd_toStartOf="@+id/tv_birthday"
+        app:layout_constraintTop_toTopOf="@+id/switch_sex" />
+
+    <TextView
+        android:id="@+id/tv_birthday"
+        style="@style/text_LG_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_80"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:drawableEnd="@drawable/ic_date"
+        android:drawablePadding="@dimen/dp_15"
+        android:background="@drawable/user_et_bg_shape_white_corners_10"
+        tools:text="1992-09-14"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_birthday_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_birthday_desc" />
+
+</android.support.constraint.ConstraintLayout>

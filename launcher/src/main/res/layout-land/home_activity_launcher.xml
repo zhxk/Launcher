@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_battery"
+        style="@style/Battery.ProgressBar.Horizontal"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:progress="100"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_battery"
+        app:layout_constraintEnd_toStartOf="@+id/tv_battery"
+        app:layout_constraintTop_toTopOf="@+id/tv_battery"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:text="100%"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_status_bar_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_system_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        android:text="15:17"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_status_bar_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/progress_bar_battery"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_home_tabs_calendar"
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="@dimen/dp_104"
+        android:contentDescription="@string/home_tabs_calendar"
+        android:src="@drawable/home_tabs_calendar"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_home_tabs_user"
+        app:layout_constraintEnd_toEndOf="@+id/colorArcProgressBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_home_tabs_user"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_tabs_user" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/home_tabs_calendar"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_tabs_text_size"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_calendar"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_calendar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_tabs_calendar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_home_tabs_user"
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="@dimen/dp_104"
+        android:layout_marginStart="@dimen/dp_46"
+        android:layout_marginTop="@dimen/dp_40"
+        android:contentDescription="@string/home_tabs_default_user"
+        android:src="@drawable/home_tabs_default_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="@dimen/dp_104"
+        android:text="@string/home_tabs_default_user"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_user"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_user"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_tabs_user" />
+
+    <com.changren.android.launcher.widget.ColorArcProgressBar
+        android:id="@+id/colorArcProgressBar"
+        android:layout_width="@dimen/dp_376"
+        android:layout_height="@dimen/dp_376"
+        android:layout_marginTop="@dimen/dp_20"
+        app:back_color="@android:color/darker_gray"
+        app:circle_size="@dimen/dp_360"
+        app:current_value="0"
+        app:front_color1="#96CFFF"
+        app:front_color2="#96CFFF"
+        app:front_color3="#CDFFFB"
+        app:front_width="@dimen/dp_10"
+        app:is_need_content="true"
+        app:is_need_title="true"
+        app:is_need_unit="true"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_home_tabs_user"
+        app:max_value="100"
+        app:string_title="@string/home_progressbar_index_health"
+        app:string_unit="@string/home_progressbar_index_desc"
+        app:total_angle="270" />
+
+    <com.changren.android.component.slidingwindow.AutoPlayRecyclerView
+        android:id="@+id/rv_banner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_550"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_40"
+        app:direction="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/colorArcProgressBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:timeInterval="30000" />
+
+    <com.changren.android.component.PagerIndicator.ScrollingPagerIndicator
+        android:id="@+id/scrollingPagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_15"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/rv_banner"
+        app:layout_constraintStart_toStartOf="@+id/rv_banner"
+        app:layout_constraintTop_toBottomOf="@+id/rv_banner"
+        app:spi_dotColor="@color/home_pager_indicator_color"
+        app:spi_dotSelectedColor="@color/home_pager_indicator_selected_color"
+        app:spi_dotSelectedSize="@dimen/dp_12"
+        app:spi_dotSize="@dimen/dp_8"
+        app:spi_dotSpacing="@dimen/dp_10" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_personal"
+        android:layout_width="@dimen/dp_122"
+        android:layout_height="@dimen/dp_122"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_130"
+        android:contentDescription="@string/home_tabs_personal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_personal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_tabs_service"
+        app:srcCompat="@drawable/home_tabs_personal_normal" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_personal"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:gravity="center"
+        android:text="@string/home_tabs_personal"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_personal"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_personal" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_service"
+        android:layout_width="@dimen/dp_122"
+        android:layout_height="@dimen/dp_122"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:contentDescription="@string/home_tabs_service"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_service"
+        app:layout_constraintEnd_toStartOf="@+id/iv_home_tabs_setting"
+        app:layout_constraintStart_toEndOf="@+id/iv_home_tabs_personal"
+        app:layout_constraintTop_toBottomOf="@+id/scrollingPagerIndicator"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/home_tabs_service_normal" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_service"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:gravity="center"
+        android:text="@string/home_tabs_service"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_service"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_service" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_setting"
+        android:layout_width="@dimen/dp_122"
+        android:layout_height="@dimen/dp_122"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_130"
+        android:contentDescription="@string/home_tabs_app"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_home_tabs_service"
+        app:srcCompat="@drawable/home_tabs_setting_normal" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_setting"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:gravity="center"
+        android:text="@string/home_tabs_app"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_setting"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_setting" />
+
+</android.support.constraint.ConstraintLayout>

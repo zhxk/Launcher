@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/user_tag_bg_checked_white" android:state_checked="true" />
+
+    <item android:color="@color/user_tag_bg_unchecked_blue" />
+</selector>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_740"
+    android:layout_height="@dimen/dp_500"
+    android:background="@drawable/home_scrollbar_bg_shape_white_corners_20">
+
+    <TextView
+        android:id="@+id/tv_health_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableLeft="@drawable/ic_data_curve"
+        android:drawableStart="@drawable/ic_data_curve"
+        android:text="@string/home_scrollbar_health_monitor"
+        style="@style/text_LG_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/view_h_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableEnd="@drawable/ic_more"
+        android:drawableRight="@drawable/ic_more"
+        android:text="@string/home_scrollbar_more"
+        style="@style/text_LG_blue"
+        app:layout_constraintBottom_toTopOf="@+id/view_h_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_health_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_h_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_64"
+        android:background="@color/home_scrollbar_separator_line_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_h_line_2"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_212"
+        android:background="@color/home_scrollbar_separator_line_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line" />
+
+    <View
+        android:id="@+id/view_v_line"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="0dp"
+        android:background="@color/home_scrollbar_separator_line_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nibp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_62"
+        android:layout_marginTop="@dimen/dp_26"
+        android:drawablePadding="@dimen/dp_20"
+        android:drawableTop="@drawable/ic_nibp"
+        android:text="@string/health_monitor_NIBP"
+        style="@style/text_LG_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line" />
+
+    <TextView
+        android:id="@+id/tv_nibp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="--/--"
+        style="@style/text_XXL_light_pink"
+        app:layout_constraintEnd_toStartOf="@+id/view_v_line"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_nibp"
+        app:layout_constraintTop_toTopOf="@+id/tv_nibp" />
+
+    <TextView
+        android:id="@+id/tv_nibp_result"
+        style="@style/text_LG_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_undetected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nibp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nibp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nibp_value"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_nibp_click"
+        style="@style/CornersButtonWithoutDefaultPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_detected"
+        app:layout_constraintBottom_toTopOf="@+id/view_h_line_2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nibp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nibp_result"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_spo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_62"
+        android:layout_marginTop="@dimen/dp_26"
+        android:drawablePadding="@dimen/dp_20"
+        android:drawableTop="@drawable/ic_spo2"
+        android:text="@string/health_monitor_SPO"
+        style="@style/text_LG_grey"
+        app:layout_constraintStart_toEndOf="@+id/view_v_line"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line" />
+
+    <TextView
+        android:id="@+id/tv_spo2_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="--/--"
+        style="@style/text_XXL_light_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_spo"
+        app:layout_constraintTop_toTopOf="@+id/tv_spo" />
+
+    <TextView
+        android:id="@+id/tv_spo2_result"
+        style="@style/text_LG_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_undetected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_spo"
+        app:layout_constraintEnd_toEndOf="@+id/tv_spo2_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spo2_value"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_spo2_click"
+        style="@style/CornersButtonWithoutDefaultPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_detected"
+        app:layout_constraintBottom_toTopOf="@+id/view_h_line_2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_spo2_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spo2_result"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_glu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_62"
+        android:layout_marginTop="@dimen/dp_26"
+        android:drawablePadding="@dimen/dp_20"
+        android:drawableTop="@drawable/ic_glu"
+        android:text="@string/health_monitor_GLU"
+        style="@style/text_LG_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line_2" />
+
+    <TextView
+        android:id="@+id/tv_glu_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="--/--"
+        style="@style/text_XXL_light_pink"
+        app:layout_constraintEnd_toStartOf="@+id/view_v_line"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_glu"
+        app:layout_constraintTop_toTopOf="@+id/tv_glu" />
+
+    <TextView
+        android:id="@+id/tv_glu_result"
+        style="@style/text_LG_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_undetected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_glu"
+        app:layout_constraintEnd_toEndOf="@+id/tv_glu_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_glu_value"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_glu_click"
+        style="@style/CornersButtonWithoutDefaultPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_detected"
+        app:layout_constraintBottom_toBottomOf="@+id/view_v_line"
+        app:layout_constraintEnd_toEndOf="@+id/tv_glu_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_glu_result"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_62"
+        android:layout_marginTop="@dimen/dp_26"
+        android:drawablePadding="@dimen/dp_20"
+        android:drawableTop="@drawable/ic_temp"
+        android:text="@string/health_monitor_TEMP"
+        style="@style/text_LG_grey"
+        app:layout_constraintStart_toEndOf="@+id/view_v_line"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line_2" />
+
+    <TextView
+        android:id="@+id/tv_temp_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:text="--/--"
+        style="@style/text_XXL_light_pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_temp"
+        app:layout_constraintTop_toTopOf="@+id/tv_temp" />
+
+    <TextView
+        android:id="@+id/tv_temp_result"
+        style="@style/text_LG_grey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_undetected"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_temp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_temp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temp_value"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn_temp_click"
+        style="@style/CornersButtonWithoutDefaultPadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/health_monitor_detected"
+        app:layout_constraintBottom_toBottomOf="@+id/view_v_line"
+        app:layout_constraintEnd_toEndOf="@+id/tv_temp_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temp_result"
+        app:layout_constraintVertical_bias="0.5"/>
+
+</android.support.constraint.ConstraintLayout>

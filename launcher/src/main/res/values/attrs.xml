@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ColorArcProgressBar">
+        <attr name="back_color" format="color" />
+        <attr name="front_color1" format="color" />
+        <attr name="front_color2" format="color" />
+        <attr name="front_color3" format="color" />
+        <attr name="back_width" format="dimension" />
+        <attr name="front_width" format="dimension" />
+        <attr name="circle_size" format="dimension" />
+        <attr name="is_need_title" format="boolean" />
+        <attr name="is_need_content" format="boolean" />
+        <attr name="is_need_unit" format="boolean" />
+        <attr name="is_need_dial" format="boolean" />
+        <attr name="string_title" format="string" />
+        <attr name="string_unit" format="string" />
+        <attr name="total_angle" format="integer" />
+        <attr name="current_value" format="float" />
+        <attr name="max_value" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseScaleView">
+        <attr name="lf_scale_view_max" format="integer" />
+        <attr name="lf_scale_view_min" format="integer" />
+        <attr name="lf_scale_view_height" format="dimension" />
+        <attr name="lf_scale_view_margin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"/>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FixedEditText">
+        <attr name="fixed_text" format="string"/>
+    </declare-styleable>
+</resources>

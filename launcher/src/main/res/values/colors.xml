@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Actionbar默认颜色-->
+    <color name="colorPrimary">#45AAFF</color>
+    <!--顶部状态栏默认颜色-->
+    <color name="colorPrimaryDark">@android:color/transparent</color>
+    <!--RadioButton/EditText/Progressbar等控件的默认颜色-->
+    <color name="colorAccent">#45AAFF</color>
+
+    <color name="bg_white">#FFFFFF</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="light_gray">#999999</color>
+    <color name="text_white_alpha_60">#99FFFFFF</color>
+    <color name="text_black_alpha_30">#4D000000</color>
+
+    <color name="default_text_color">#666666</color>
+    <color name="default_subtext_color">#999999</color>
+    <color name="home_tabs_text_white">#FFFFFF</color>
+    <color name="colorArcProgressBar_text_color">#FFFFFF</color>
+    <color name="battery_uncharged_progress_color">#FFFFFF</color>
+    <color name="battery_charged_progress_color">#17ea61</color>
+    <color name="battery_many_progress_color">#7CFC00</color>
+    <color name="battery_middle_progress_color">#FFA500</color>
+    <color name="battery_low_progress_color">#FF3030</color>
+
+    <color name="home_scrollbar_title_color">#45AAFF</color>
+    <color name="home_scrollbar_separator_line_color">#EFEFEF</color>
+    <color name="home_scrollbar_health_btn_color">#FFAEAE</color>
+    <color name="home_scrollbar_health_text_color">#FF6363</color>
+
+    <color name="home_pager_indicator_color">#B3FFFFFF</color>
+    <color name="home_pager_indicator_selected_color">#FFFFFF</color>
+
+    <color name="user_warning_text_color">#FF0000</color>
+    <color name="user_btn_normal_color">#6ab5ff</color>
+    <color name="user_btn_pressed_color">#3399ff</color>
+    <color name="user_btn_no_enabled_color">#CBCBCB</color>
+    <color name="user_et_bg_white">#FFFFFF</color>
+    <color name="user_tag_bg_unchecked_blue">#6BBBFF</color>
+    <color name="user_tag_bg_checked_white">#FFFFFF</color>
+    <color name="user_health_score_green">#58E583</color>
+    <color name="user_health_score_red">#FF6363</color>
+    <color name="user_health_score_black">#666666</color>
+
+    <color name="user_list_bg_checked">#675BFF</color>
+    <color name="user_member_list_bg">#45AAFF</color>
+
+    <color name="user_member_item_pressed">#DDDDDD</color>
+
+    <color name="user_dialog_btn_color">#3399FF</color>
+    <color name="divider_line_color">#D4D4D4</color>
+
+    <!--add for plan line by shibo.zheng 20190221 start-->
+    <color name="plan_line_color">#84B5FF</color>
+    <color name="plan_line_text_color">#3276FF</color>
+    <color name="plan_line_time_color">#333333</color>
+    <!--add for plan line by shibo.zheng 20190221 end-->
+    <color name="user_default_bg">#F1F1F1</color>
+</resources>

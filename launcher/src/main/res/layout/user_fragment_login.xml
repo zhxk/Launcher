@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_95"
+            android:layout_marginEnd="@dimen/dp_126"
+            android:layout_marginStart="@dimen/dp_126"
+            android:drawableLeft="@mipmap/ic_mobile"
+            android:drawablePadding="@dimen/dp_30"
+            android:drawableStart="@mipmap/ic_mobile"
+            android:hint="@string/user_phone_edit_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="@dimen/textSizeMD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_95"
+            android:layout_marginTop="@dimen/dp_50"
+            android:drawableLeft="@mipmap/ic_password"
+            android:drawablePadding="@dimen/dp_30"
+            android:drawableStart="@mipmap/ic_password"
+            android:hint="@string/user_pwd_edit_hint"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:textSize="@dimen/textSizeMD"
+            app:layout_constraintEnd_toEndOf="@+id/et_phone"
+            app:layout_constraintStart_toStartOf="@+id/et_phone"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+        <TextView
+            android:id="@+id/tv_warning"
+            style="@style/text_XS_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/user_login_warning"
+            android:singleLine="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintHorizontal_bias="0.42"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/Button.Rounded.Corner50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_75"
+            android:text="@string/user_login"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            style="@style/text_MD_light_grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/user_forget_password"
+            app:layout_constraintEnd_toEndOf="@+id/btn_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_740"
+    android:layout_height="@dimen/dp_500"
+    android:background="@drawable/home_scrollbar_bg_shape_white_corners_20">
+
+    <TextView
+        android:id="@+id/tv_plan_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableLeft="@drawable/ic_plan"
+        android:drawableStart="@drawable/ic_plan"
+        android:text="@string/home_scrollbar_health_plan"
+        style="@style/text_LG_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/view_h_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/plan_tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:drawablePadding="@dimen/dp_10"
+        android:drawableRight="@drawable/ic_more"
+        android:drawableEnd="@drawable/ic_more"
+        android:text="@string/home_scrollbar_more"
+        style="@style/text_LG_blue"
+        app:layout_constraintBottom_toTopOf="@+id/view_h_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_plan_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_h_line"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_64"
+        android:background="@color/home_scrollbar_separator_line_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/plan_line_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_h_line"/>
+
+    <TextView
+        android:id="@+id/plan_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_30"
+        android:drawableStart="@mipmap/event"
+        android:drawableLeft="@mipmap/event"
+        android:drawablePadding="@dimen/dp_18"
+        android:text="@string/home_banner_plan_now_todo"
+        style="@style/text_MD_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plan_line_info" />
+
+    <TextView
+        android:id="@+id/plan_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:drawableStart="@mipmap/event"
+        android:drawableLeft="@mipmap/event"
+        android:drawablePadding="@dimen/dp_18"
+        android:text="@string/home_banner_plan_next_todo"
+        style="@style/text_MD_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plan_now" />
+
+    <LinearLayout
+        android:id="@+id/plan_line_main_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.changren.android.launcher.widget.DrawableTextView
+            android:id="@+id/plan_line_remind_medication"
+            style="@style/plan_line_main"
+            android:text="@string/plan_line_remind_medication"
+            android:drawableLeft="@mipmap/plan_line_main_medication_icon_32"
+            android:drawableStart="@mipmap/plan_line_main_medication_icon_32" />
+
+        <com.changren.android.launcher.widget.DrawableTextView
+            android:id="@+id/plan_line_remind_bp"
+            style="@style/plan_line_main"
+            android:text="@string/plan_line_BP"
+            android:drawableLeft="@mipmap/plan_line_main_bp_icon_32"
+            android:drawableStart="@mipmap/plan_line_main_bp_icon_32"/>
+
+        <com.changren.android.launcher.widget.DrawableTextView
+            android:id="@+id/plan_line_remind_glu"
+            style="@style/plan_line_main"
+            android:text="@string/plan_line_GLU"
+            android:drawableStart="@mipmap/plan_line_main_glu_icon_32"
+            android:drawableLeft="@mipmap/plan_line_main_glu_icon_32"/>
+
+        <com.changren.android.launcher.widget.DrawableTextView
+            android:id="@+id/plan_line_remind_weight"
+            style="@style/plan_line_main"
+            android:text="@string/plan_line_weight"
+            android:drawableLeft="@mipmap/plan_line_main_weight_icon_32"
+            android:drawableStart="@mipmap/plan_line_main_weight_icon_32"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

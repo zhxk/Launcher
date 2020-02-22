@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--ScrollView用于处理弹出键盘布局被挤出屏幕的问题-->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginEnd="@dimen/dp_366"
+            android:layout_marginStart="@dimen/dp_366"
+            android:drawableLeft="@mipmap/ic_mobile"
+            android:drawablePadding="@dimen/dp_30"
+            android:drawableStart="@mipmap/ic_mobile"
+            android:hint="@string/user_phone_edit_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="@dimen/textSizeMD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_25"
+            android:drawableLeft="@mipmap/ic_password"
+            android:drawablePadding="@dimen/dp_30"
+            android:drawableStart="@mipmap/ic_password"
+            android:hint="@string/user_pwd_rule_edit_hint"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:textSize="@dimen/textSizeMD"
+            app:layout_constraintEnd_toEndOf="@+id/et_phone"
+            app:layout_constraintStart_toStartOf="@+id/et_phone"
+            app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+        <EditText
+            android:id="@+id/et_verify"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_25"
+            android:drawableLeft="@mipmap/ic_verify"
+            android:drawablePadding="@dimen/dp_30"
+            android:drawableStart="@mipmap/ic_verify"
+            android:hint="@string/user_register_verify_code"
+            android:inputType="number"
+            android:textSize="@dimen/textSizeMD"
+            app:layout_constraintEnd_toStartOf="@+id/btn_verify"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <Button
+            android:id="@+id/btn_verify"
+            style="@style/Button.Rounded.Corner10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_30"
+            android:text="@string/user_send_verify_code"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintStart_toEndOf="@+id/et_verify" />
+
+        <TextView
+            android:id="@+id/tv_warning"
+            style="@style/text_XS_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="@string/user_phone_number_registered"
+            app:layout_constraintEnd_toEndOf="@+id/btn_verify"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="@+id/et_verify"
+            app:layout_constraintTop_toBottomOf="@+id/et_verify" />
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/Button.Rounded.Corner50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_50"
+            android:text="@string/user_register"
+            app:layout_constraintEnd_toEndOf="@+id/btn_verify"
+            app:layout_constraintStart_toStartOf="@+id/et_verify"
+            app:layout_constraintTop_toBottomOf="@+id/et_verify" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

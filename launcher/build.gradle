@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.changren.android.launcher"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 14
+        versionName "1.3.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Write out the current schema of Room指定room.schemaLocation生成的文件路径
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+//    externalNativeBuild {
+//        cmake {
+//            path "CMakeLists.txt"
+//        }
+//    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    //引入libs文件夹下*.jar文件 Start
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //引入libs文件夹下*.jar文件 End
+    //关联Module项目 Start
+    implementation project(':component')
+    //关联Module项目 End
+    //引入Android Support Library Start
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    //引入Android Support Library End
+    
+    //butterknife注解框架 Start
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //butterknife End
+    
+    //默认测试框架 Start
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //默认测试框架 End
+    
+    //数据库框架Google Room Start
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    //数据库框架Google Room End
+    
+    //异步处理框架RxJava2(RxAndroid是RxJava的扩展，所以最好引入) Start
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    //RxJava2 End
+    
+    //网络请求框架Retrofit2 Start
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    //Retrofit2 End
+    
+    //官方自带网络log打印拦截器 Start
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+    //官方自带网络log打印拦截器 End
+    
+    //圆角图片控件 Start
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //圆角图片控件 End
+
+    //网络图片加载库 Start
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //需要使用不同的support库版本，且默认要求support版本27及以上
+//    implementation('com.github.bumptech.glide:glide:4.8.0') {
+//        exclude group: "com.android.support"
+//    }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //网络图片加载库 End
+
+    //Google开源动态权限申请库 start
+    implementation ('pub.devrel:easypermissions:2.0.1') {
+        exclude group: "com.android.support"
+    }
+    //Google开源动态权限申请库 end
+
+    //开源Dialog框架 start
+//    implementation 'com.github.the-pig-of-jungle.smart-show:dialog:2.6.2'
+    //开源Dialog框架 end
+}

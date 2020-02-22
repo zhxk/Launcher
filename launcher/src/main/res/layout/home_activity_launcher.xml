@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <TextView
+        android:id="@+id/tv_home_tabs_personal"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_38"
+        android:gravity="center"
+        android:text="@string/home_tabs_personal"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_service"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_38"
+        android:gravity="center"
+        android:text="@string/home_tabs_service"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_setting"
+        android:layout_width="@dimen/dp_141"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_38"
+        android:layout_marginStart="@dimen/dp_8"
+        android:gravity="center"
+        android:text="@string/home_tabs_app"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:contentDescription="@string/home_tabs_personal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_personal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_tabs_personal_normal" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:contentDescription="@string/home_tabs_personal"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_tabs_service_normal" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:contentDescription="@string/home_tabs_setting"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home_tabs_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home_tabs_setting_normal" />
+
+    <ImageView
+        android:id="@+id/iv_home_tabs_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/home_tabs_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/colorArcProgressBar"
+        app:layout_constraintEnd_toStartOf="@+id/colorArcProgressBar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/colorArcProgressBar"
+        app:layout_constraintVertical_bias="0.48"
+        app:srcCompat="@drawable/home_tabs_calendar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_home_tabs_user"
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="@dimen/dp_104"
+        android:contentDescription="@string/home_tabs_default_user"
+        app:layout_constraintBottom_toBottomOf="@+id/colorArcProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colorArcProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/colorArcProgressBar"
+        app:layout_constraintVertical_bias="0.48"
+        android:src="@drawable/home_tabs_default_user" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/home_tabs_calendar"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_tabs_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_calendar"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_calendar"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_tabs_calendar" />
+
+    <TextView
+        android:id="@+id/tv_home_tabs_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/dp_104"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/home_tabs_default_user"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_tabs_text_size"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="@+id/iv_home_tabs_user"
+        app:layout_constraintStart_toStartOf="@+id/iv_home_tabs_user"
+        app:layout_constraintTop_toBottomOf="@+id/iv_home_tabs_user" />
+
+    <com.changren.android.launcher.widget.ColorArcProgressBar
+        android:id="@+id/colorArcProgressBar"
+        android:layout_width="@dimen/dp_395"
+        android:layout_height="@dimen/dp_395"
+        android:layout_marginTop="@dimen/dp_64"
+        app:is_need_content="true"
+        app:front_color1="#96CFFF"
+        app:front_color2="#96CFFF"
+        app:front_color3="#CDFFFB"
+        app:max_value="100"
+        app:front_width="@dimen/dp_10"
+        app:circle_size="@dimen/dp_360"
+        app:total_angle="270"
+        app:current_value="0"
+        app:is_need_unit="true"
+        app:string_unit="@string/home_progressbar_index_desc"
+        app:is_need_title="true"
+        app:string_title="@string/home_progressbar_index_health"
+        app:back_color="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_battery"
+        style="@style/Battery.ProgressBar.Horizontal"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:progress="100"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_battery"
+        app:layout_constraintEnd_toStartOf="@+id/tv_battery"
+        app:layout_constraintTop_toTopOf="@+id/tv_battery"
+        app:layout_constraintVertical_bias="0.5" />
+    <!--android:max="100"-->
+    <!--android:secondaryProgress="20"-->
+    <!--android:progressDrawable="@drawable/progressbar_preview"-->
+    <TextView
+        android:id="@+id/tv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:text="100%"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_status_bar_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_system_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_8"
+        android:text="15:17"
+        android:textColor="@color/home_tabs_text_white"
+        android:textSize="@dimen/home_status_bar_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/progress_bar_battery"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.changren.android.component.slidingwindow.AutoPlayRecyclerView
+        android:id="@+id/rv_banner"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_500"
+        app:direction="right"
+        app:timeInterval="30000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorArcProgressBar" />
+
+    <com.changren.android.component.PagerIndicator.ScrollingPagerIndicator
+        android:id="@+id/scrollingPagerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        app:spi_dotColor="@color/home_pager_indicator_color"
+        app:spi_dotSelectedColor="@color/home_pager_indicator_selected_color"
+        app:spi_dotSize="@dimen/dp_8"
+        app:spi_dotSelectedSize="@dimen/dp_12"
+        app:spi_dotSpacing="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_banner" />
+
+
+    <!--<com.changren.android.component.slidingwindow.BannerRecyclerView
+        android:id="@+id/rv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorArcProgressBar" />-->
+
+    <!--<android.support.v4.view.ViewPager
+        android:id="@+id/vp_banner"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:clipChildren="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/colorArcProgressBar" />-->
+
+    <!--<com.changren.android.component.ultraviewpager.UltraView
+        android:id="@+id/ultra_banner"
+        android:layout_width="0dp"
+        android:layout_height="528dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />-->
+
+
+</android.support.constraint.ConstraintLayout>
