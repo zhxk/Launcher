@@ -2,25 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="20dp"
-    android:paddingEnd="20dp"
+    android:paddingStart="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_20"
     android:background="@drawable/user_dialog_bg_shape_white_corners_10"
     android:orientation="vertical">
     
     <android.support.v4.widget.ContentLoadingProgressBar
         android:id="@+id/uploading"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/dp_80"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dp_20"
         style="@style/Progress.Circular"/>
 
     <TextView
         android:id="@+id/tv_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:lineSpacingExtra="5dp"
+        android:layout_marginTop="@dimen/dp_30"
+        android:lineSpacingExtra="@dimen/dp_5"
         android:text="@string/user_upload_data_during"
         android:maxLines="3"
         style="@style/text_MD_grey"/>
@@ -29,13 +29,13 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/dp_30"
         android:gravity="bottom|center"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="@dimen/dp_30">
 
         <TextView
             android:id="@+id/tv_confirm"
-            android:layout_width="150dp"
+            android:layout_width="@dimen/dp_150"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:gravity="center"
@@ -46,12 +46,12 @@
 
         <TextView
             android:id="@+id/tv_retry"
-            android:layout_width="150dp"
+            android:layout_width="@dimen/dp_150"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/tv_confirm"
-            android:layout_marginEnd="64dp"
+            android:layout_marginEnd="@dimen/dp_64"
             android:gravity="center"
-            android:padding="10dp"
+            android:padding="@dimen/dp_10"
             android:background="@drawable/user_btn_bg_selector_pressed"
             android:text="@string/user_upload_data_retry"
             style="@style/text_MD_white"

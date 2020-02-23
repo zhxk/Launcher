@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="550dp"
+    android:layout_width="@dimen/dp_500"
     android:layout_height="wrap_content"
     android:minHeight="390dp"
     android:background="@drawable/user_dialog_bg_shape_white_corners_10">
@@ -11,7 +11,7 @@
         android:id="@+id/tv_title"
         style="@style/text_LG_blue"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/dp_80"
         android:text="@string/upgrade_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
     <View
         android:id="@+id/space"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dp_1"
         android:background="@color/divider_line_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,10 +30,10 @@
         android:id="@+id/sv_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_30"
         android:scrollbars="vertical"
         android:fadeScrollbars="false"
         app:layout_constraintBottom_toTopOf="@+id/space2"
@@ -55,7 +55,7 @@
     <View
         android:id="@+id/space2"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dp_1"
         android:background="@color/divider_line_color"
         app:layout_constraintBottom_toTopOf="@+id/tv_update"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +64,7 @@
     <TextView
         android:id="@+id/tv_cancel"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/dp_80"
         style="@style/text_LG_blue"
         android:text="@string/upgrade_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
     <TextView
         android:id="@+id/tv_update"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/dp_80"
         style="@style/text_LG_blue"
         android:text="@string/upgrade_update"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -83,7 +83,7 @@
 
     <View
         android:id="@+id/space3"
-        android:layout_width="1dp"
+        android:layout_width="@dimen/dp_1"
         android:layout_height="wrap_content"
         android:background="@color/divider_line_color"
         app:layout_constraintEnd_toEndOf="parent"
