@@ -112,4 +112,7 @@ dependencies {
     //开源Dialog框架 start
 //    implementation 'com.github.the-pig-of-jungle.smart-show:dialog:2.6.2'
     //开源Dialog框架 end
+
+    //Bugly
+    implementation 'com.tencent.bugly:crashreport:3.1.0'
 }

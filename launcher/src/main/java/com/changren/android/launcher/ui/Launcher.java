@@ -80,7 +80,7 @@ public class Launcher extends AppCompatActivity implements EasyPermissions.Permi
     @BindView(R.id.scrollingPagerIndicator)
     ScrollingPagerIndicator mPagerIndicator;
 
-    //    @BindView(R.id.iv_home_tabs_calendar)
+    @BindView(R.id.iv_home_tabs_calendar)
     ImageView mCalendarView;
 
     @BindView(R.id.tv_system_time)

@@ -123,11 +123,11 @@ public class ColorArcProgressBar extends View {
     /**
      * 显示单位部分的字体大小
      */
-    private float hintSize = dipToPx(28);
+    private float hintSize = dipToPx(20);
     /**
      * 显示标题部分的字体大小
      */
-    private float curSpeedSize = dipToPx(32);
+    private float curSpeedSize = dipToPx(20);
     /**
      * 动画持续时间 ms
      */

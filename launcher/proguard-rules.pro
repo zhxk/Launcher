@@ -72,3 +72,6 @@
 -keepclasseswithmembers class * {
     @android.support.annotation.Keep <init>(...);
 }
+#Bugly
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
